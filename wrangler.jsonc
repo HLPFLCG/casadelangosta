@@ -1,0 +1,23 @@
+{
+  "name": "casa-de-langosta",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-04-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+
+  // KV namespace for Next.js incremental cache.
+  // After running `wrangler kv namespace create NEXT_CACHE_WORKERS_KV`,
+  // paste the returned id into the object below and uncomment.
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "NEXT_CACHE_WORKERS_KV",
+  //     "id": "TODO: paste id here after running wrangler kv namespace create NEXT_CACHE_WORKERS_KV"
+  //   }
+  // ]
+}

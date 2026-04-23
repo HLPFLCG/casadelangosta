@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "story": "Our Story",
+    "excursions": "Excursions",
+    "visit": "Visit Us",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "reserve": "Reserve"
+  },
+  "hero": {
+    "headline": "Fresh Caribbean lobster.",
+    "headline2": "Pulled from our tank.",
+    "headline3": "Plated on the sand.",
+    "subheadline": "Family-owned since the first cast. Roberto's fishermen bring the catch in every morning — you choose your lobster, we cook it your way.",
+    "cta_whatsapp": "Reserve on WhatsApp",
+    "cta_menu": "See the Menu"
+  },
+  "signature": {
+    "title": "What the sea brings today",
+    "subtitle": "Three dishes that tell the whole story of Cahuita's Caribbean coast.",
+    "lobster_title": "Caribbean Lobster",
+    "lobster_desc": "Picked live from our tank. Served in coconut sauce or garlic sauce with rice & beans, plantains, and salad.",
+    "ceviche_title": "Fish Ceviche",
+    "ceviche_desc": "Fresh catch marinated in lime, culantro, and Caribbean spices. Cool, bright, and completely addictive.",
+    "jerk_title": "Jerk Chicken & Rice",
+    "jerk_desc": "Caribbean-style jerk marinade, slow-charred over the grill. Served with coconut rice and peas."
+  },
+  "lobster_tank": {
+    "title": "Pick your lobster",
+    "body": "When Roberto's fishermen come in from the sea each morning, the freshest Caribbean spiny lobsters go straight into our tank. Guests walk up, choose their own, and tell us how they'd like it — bathed in our house coconut sauce, or golden with garlic butter. It's been this way for as long as anyone can remember on Calle Principal.",
+    "cta": "Reserve your table"
+  },
+  "story_teaser": {
+    "title": "Five generations of fishermen",
+    "body": "Roberto grew up following his father and grandfather into the Caribbean waters off Cahuita. Today he brings that same daily commitment to the table — nothing arrives here that wasn't swimming this morning.",
+    "cta": "Read our story"
+  },
+  "visit_teaser": {
+    "title": "Find us in Cahuita",
+    "address": "Calle Principal, 150 m northwest of the entrance to Parque Nacional Cahuita",
+    "hours_label": "Open daily",
+    "hours": "12:00 – 22:00",
+    "directions_cta": "Get directions"
+  },
+  "testimonials": {
+    "title": "What guests are saying",
+    "items": [
+      {
+        "quote": "We ordered the lobster in coconut sauce and it was the single best meal of our trip. The setting — sand floor, open air, Calypso playing — made it unforgettable.",
+        "author": "Marie, France"
+      },
+      {
+        "quote": "Roberto personally recommended the fish ceviche to start. It was incredible. The whole place feels like a family kitchen that just happens to be right on the Caribbean coast.",
+        "author": "James, United Kingdom"
+      },
+      {
+        "quote": "Getting to pick our own lobster from the tank was such a special experience. Kids loved it, adults loved it even more. Will absolutely be back.",
+        "author": "Sofia & Tomas, Germany"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "Ready for the freshest lobster on the Caribbean coast?",
+    "body": "WhatsApp us to reserve your table or ask about today's catch.",
+    "whatsapp": "Reserve on WhatsApp",
+    "call": "Call us"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Everything changes with the tide. The lobster price varies by weight and market — ask your server.",
+    "lobster_note": "Lobster priced by weight — market price. Ask your server.",
+    "categories": {
+      "tank": "From the Tank",
+      "sea": "From the Sea",
+      "grill": "From the Grill",
+      "tierra": "Tierra",
+      "vegetariano": "Vegetariano",
+      "drinks": "Natural Drinks"
+    }
+  },
+  "story": {
+    "title": "Our Story",
+    "intro": "Five generations of fishermen. One restaurant on the sand.",
+    "p1": "Roberto Segura was born into the sea. His great-great-grandfather first cast nets in the waters off Cahuita before the road from San José existed — back when the only way in was by dugout canoe along the coast. Generation by generation, the family learned the tides, the seasons, the hidden reefs where the Caribbean spiny lobster gathers.",
+    "p2": "Roberto's father taught him to read the water before he taught him to read. By the time Roberto was old enough to haul traps, he already knew which mornings the lobster would be running and which were better spent mending nets and telling stories.",
+    "pullquote": "Every dish that comes out of this kitchen was swimming in the Caribbean this morning. That's the only promise we make — and the only one that matters.",
+    "pullquote_attr": "— Roberto Segura, owner",
+    "p3": "The restaurant started simply enough: a few tables under a thatched palapa, plates of whatever the boats brought in that day, and the kind of cooking that Roberto's mother and grandmother had always done — Afro-Caribbean flavours rooted in the Limón coast. Coconut, culantro, scotch bonnet, plantain. Techniques that travelled from Jamaica and West Africa and became something entirely Costa Rican over two hundred years.",
+    "p4": "Today the family still does it the same way. Roberto's fishermen leave before sunrise. By midday the lobsters are in the tank, the snapper is on ice, and the kitchen is already filling the open air with the smell of garlic and coconut. Sit down, pick your lobster, and let the sea decide the rest.",
+    "cta": "Reserve your table on WhatsApp"
+  },
+  "excursions": {
+    "title": "Local Excursions",
+    "subtitle": "Cahuita and the surrounding coast are among the most biodiverse places on earth. We work with trusted local guides — stop by the restaurant or WhatsApp us to arrange any of the tours below.",
+    "booking_note": "All excursions are arranged on-site or by WhatsApp. No in-restaurant payment required.",
+    "ask_whatsapp": "Ask on WhatsApp",
+    "items": {
+      "park": {
+        "title": "Cahuita National Park Snorkel Tour",
+        "desc": "Wade into the crystalline water of one of Costa Rica's most celebrated reef ecosystems. Your guide leads you through coral gardens thick with parrotfish, angelfish, and sea turtles. The park trail through the coastal jungle is included.",
+        "duration": "3–4 hours",
+        "message": "Hi! I'd like to arrange the Cahuita National Park snorkel tour. Can you help?"
+      },
+      "sloths": {
+        "title": "Sloth Sanctuary",
+        "desc": "Visit the world-famous Aviarios del Caribe Sloth Sanctuary, just 15 km north of Cahuita. Meet rescued two- and three-toed sloths up close and learn about the conservation work protecting these extraordinary creatures.",
+        "duration": "2–3 hours",
+        "message": "Hi! I'd like to arrange a visit to the Sloth Sanctuary. Can you help?"
+      },
+      "bribri": {
+        "title": "Bribri Indigenous Territory Day",
+        "desc": "Journey into the Talamanca mountains to visit a Bribri community. Learn about cacao cultivation, traditional medicine, and a culture that has thrived in this region for thousands of years. An immersive, respectful, and truly memorable day.",
+        "duration": "Full day",
+        "message": "Hi! I'd like to arrange the Bribri indigenous territory tour. Can you help?"
+      },
+      "dolphins": {
+        "title": "Dolphin Watching at Manzanillo",
+        "desc": "Head south along the coast to the Gandoca-Manzanillo Wildlife Refuge, where spinner and bottlenose dolphins are regularly spotted in the bay. Snorkelling in the pristine reef is often included.",
+        "duration": "4–5 hours",
+        "message": "Hi! I'd like to arrange the dolphin watching tour at Manzanillo. Can you help?"
+      }
+    }
+  },
+  "visit": {
+    "title": "Visit Us",
+    "subtitle": "We're easy to find and worth the trip from anywhere on the Caribbean coast.",
+    "address_title": "Address",
+    "address": "Calle Principal, 150 m northwest of the entrance to Parque Nacional Cahuita, Cahuita, Limón, Costa Rica, 70403",
+    "hours_title": "Opening Hours",
+    "hours_daily": "Monday – Sunday",
+    "hours_time": "12:00 – 22:00",
+    "phone_title": "Phone & WhatsApp",
+    "phone_primary": "+506 8457 8407",
+    "phone_secondary": "2755 1148 (landline)",
+    "getting_here_title": "Getting Here",
+    "getting_here_sj": "From San José, take Route 32 east toward Limón, then head south on Route 36 to Cahuita. The drive takes approximately 4 hours.",
+    "getting_here_bus": "Buses depart Terminal MEPE (San José) for Cahuita daily. The last bus typically leaves mid-afternoon — confirm current schedules at the terminal or with us via WhatsApp.",
+    "getting_here_parking": "Street parking is available along Calle Principal. The restaurant is an easy walk from the main bus stop.",
+    "accessibility_title": "Accessibility",
+    "accessibility_note": "Our dining area has a sand floor, which may be challenging for guests using wheelchairs or mobility aids. Please WhatsApp us before your visit and we'll do everything we can to accommodate you comfortably.",
+    "map_title": "On the map",
+    "directions_cta": "Open in Google Maps"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A glimpse of the kitchen, the table, the tank, and the coast.",
+    "alt": {
+      "hero": "Open-air dining area with thatched roof and handcrafted wooden tables at Casa de Langosta",
+      "lobster": "Fresh Caribbean spiny lobster in the restaurant tank",
+      "coconut": "Lobster in coconut sauce plated with rice and beans and plantains",
+      "ceviche": "Fish ceviche with lime and Caribbean spices",
+      "kitchen": "Roberto in the open kitchen preparing the day's catch",
+      "coast": "Cahuita's Caribbean coastline at sunset",
+      "interior1": "Guests dining under the thatched roof at sunset",
+      "interior2": "Handcrafted local-wood table set for dinner",
+      "snapper": "Whole grilled red snapper fresh from the Caribbean",
+      "jerk": "Caribbean jerk chicken with coconut rice and peas"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "The easiest way to reach us is WhatsApp — Roberto and the team respond quickly. You can also use the form below.",
+    "whatsapp_cta": "WhatsApp us",
+    "call_cta": "Call us",
+    "email_cta": "Email",
+    "form_title": "Send a message",
+    "form_name": "Name",
+    "form_name_placeholder": "Your name",
+    "form_party": "Party size",
+    "form_party_placeholder": "Number of guests",
+    "form_date": "Preferred date",
+    "form_message": "Message",
+    "form_message_placeholder": "Tell us what you need — date, party size, dietary requirements, excursion interest…",
+    "form_submit": "Send via WhatsApp",
+    "form_success": "Your message has been sent. We'll be in touch soon!",
+    "form_error": "Something went wrong. Please try WhatsApp directly."
+  },
+  "footer": {
+    "tagline": "Family-owned Caribbean seafood. Cahuita, Costa Rica.",
+    "hours": "Open daily 12:00 – 22:00",
+    "copyright": "© {year} Restaurante Roberto — La Casa de la Langosta. Pura vida.",
+    "nav_title": "Navigate",
+    "contact_title": "Contact"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist. Head back to the home page and find your table.",
+    "cta": "Back to home"
+  },
+  "badges": {
+    "gf": "Gluten-free",
+    "v": "Vegetarian",
+    "vegan": "Vegan",
+    "spicy": "Spicy",
+    "shellfish": "Contains shellfish",
+    "market_price": "Market price"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "story": "Nuestra Historia",
+    "excursions": "Excursiones",
+    "visit": "Visítenos",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "reserve": "Reservar"
+  },
+  "hero": {
+    "headline": "Langosta caribeña fresca.",
+    "headline2": "Directo de nuestro tanque.",
+    "headline3": "Servida sobre la arena.",
+    "subheadline": "De familia desde la primera red. Los pescadores de Roberto traen la pesca cada mañana — usted elige su langosta, nosotros la preparamos a su gusto.",
+    "cta_whatsapp": "Reservar por WhatsApp",
+    "cta_menu": "Ver el Menú"
+  },
+  "signature": {
+    "title": "Lo que trae el mar hoy",
+    "subtitle": "Tres platos que cuentan la historia completa de la costa caribeña de Cahuita.",
+    "lobster_title": "Langosta Caribeña",
+    "lobster_desc": "Elegida viva de nuestro tanque. Servida en salsa de coco o salsa de ajo con arroz con frijoles, plátanos y ensalada.",
+    "ceviche_title": "Ceviche de Pescado",
+    "ceviche_desc": "Pesca fresca marinada en limón, culantro y especias caribeñas. Fresco, brillante y completamente irresistible.",
+    "jerk_title": "Pollo Jerk y Arroz",
+    "jerk_desc": "Marinado jerk al estilo caribeño, asado lentamente a la parrilla. Servido con arroz con coco y frijoles."
+  },
+  "lobster_tank": {
+    "title": "Elija su langosta",
+    "body": "Cuando los pescadores de Roberto llegan del mar cada mañana, las langostas espinosas del Caribe más frescas van directamente a nuestro tanque. Los huéspedes se acercan, eligen la suya y nos dicen cómo la prefieren — bañada en nuestra salsa de coco de la casa, o dorada con mantequilla de ajo. Así ha sido desde siempre en la Calle Principal.",
+    "cta": "Reservar su mesa"
+  },
+  "story_teaser": {
+    "title": "Cinco generaciones de pescadores",
+    "body": "Roberto creció siguiendo a su padre y abuelo en las aguas caribeñas frente a Cahuita. Hoy lleva ese mismo compromiso diario a la mesa — nada llega aquí que no haya estado nadando esta mañana.",
+    "cta": "Leer nuestra historia"
+  },
+  "visit_teaser": {
+    "title": "Encuéntrenos en Cahuita",
+    "address": "Calle Principal, 150 m al noroeste de la entrada al Parque Nacional Cahuita",
+    "hours_label": "Abierto todos los días",
+    "hours": "12:00 – 22:00",
+    "directions_cta": "Cómo llegar"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros huéspedes",
+    "items": [
+      {
+        "quote": "Pedimos la langosta en salsa de coco y fue la mejor comida de nuestro viaje. El ambiente — piso de arena, al aire libre, música de calipso — fue inolvidable.",
+        "author": "Marie, Francia"
+      },
+      {
+        "quote": "Roberto nos recomendó personalmente el ceviche de pescado para empezar. Fue increíble. Todo el lugar se siente como una cocina familiar que resulta estar justo en la costa caribeña.",
+        "author": "James, Reino Unido"
+      },
+      {
+        "quote": "Poder elegir nuestra propia langosta del tanque fue una experiencia muy especial. A los niños les encantó, a los adultos aún más. Definitivamente volveremos.",
+        "author": "Sofia y Tomas, Alemania"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "¿Listo para la langosta más fresca de la costa caribeña?",
+    "body": "Escríbanos por WhatsApp para reservar su mesa o consultar la pesca del día.",
+    "whatsapp": "Reservar por WhatsApp",
+    "call": "Llamarnos"
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "subtitle": "Todo cambia con la marea. El precio de la langosta varía según el peso y el mercado — consulte con su mesero.",
+    "lobster_note": "Langosta a precio de mercado según el peso. Consulte con su mesero.",
+    "categories": {
+      "tank": "Del Tanque",
+      "sea": "Del Mar",
+      "grill": "De la Parrilla",
+      "tierra": "Tierra",
+      "vegetariano": "Vegetariano",
+      "drinks": "Bebidas Naturales"
+    }
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "intro": "Cinco generaciones de pescadores. Un restaurante sobre la arena.",
+    "p1": "Roberto Segura nació junto al mar. Su tatarabuelo echó redes por primera vez en las aguas de Cahuita antes de que existiera la carretera desde San José — cuando la única forma de llegar era en canoa a lo largo de la costa. Generación tras generación, la familia aprendió las mareas, las estaciones, los arrecifes escondidos donde se reúne la langosta espinosa caribeña.",
+    "p2": "El padre de Roberto le enseñó a leer el agua antes de enseñarle a leer letras. Para cuando Roberto tuvo edad suficiente para jalar las trampas, ya sabía qué mañanas correría la langosta y cuáles era mejor aprovechar para remendar redes y contar historias.",
+    "pullquote": "Cada plato que sale de esta cocina estuvo nadando en el Caribe esta mañana. Esa es la única promesa que hacemos — y la única que importa.",
+    "pullquote_attr": "— Roberto Segura, propietario",
+    "p3": "El restaurante empezó de manera sencilla: unas pocas mesas bajo una palapa de paja, platos con lo que trajeran los botes ese día, y la cocina que la madre y la abuela de Roberto siempre habían hecho — sabores afrocaribeños arraigados en la costa de Limón. Coco, culantro, chile panameño, plátano. Técnicas que viajaron desde Jamaica y África Occidental y se convirtieron en algo completamente costarricense a lo largo de doscientos años.",
+    "p4": "Hoy la familia sigue haciéndolo de la misma manera. Los pescadores de Roberto salen antes del amanecer. Al mediodía las langostas están en el tanque, el pargo está en hielo y la cocina ya llena el aire abierto con aroma a ajo y coco. Siéntese, elija su langosta y deje que el mar decida el resto.",
+    "cta": "Reservar su mesa por WhatsApp"
+  },
+  "excursions": {
+    "title": "Excursiones Locales",
+    "subtitle": "Cahuita y la costa circundante son de los lugares más biodiversos del planeta. Trabajamos con guías locales de confianza — pase por el restaurante o escríbanos por WhatsApp para organizar cualquiera de los tours a continuación.",
+    "booking_note": "Todas las excursiones se organizan en el restaurante o por WhatsApp. No se requiere pago en el restaurante.",
+    "ask_whatsapp": "Preguntar por WhatsApp",
+    "items": {
+      "park": {
+        "title": "Snorkel en el Parque Nacional Cahuita",
+        "desc": "Adéntrese en las cristalinas aguas de uno de los ecosistemas de arrecife más célebres de Costa Rica. Su guía lo lleva por jardines de coral llenos de peces loro, peces ángel y tortugas marinas. Se incluye el sendero por la selva costera del parque.",
+        "duration": "3–4 horas",
+        "message": "¡Hola! Me gustaría organizar el snorkel en el Parque Nacional Cahuita. ¿Pueden ayudarme?"
+      },
+      "sloths": {
+        "title": "Santuario de Perezosos",
+        "desc": "Visite el mundialmente famoso Santuario de Perezosos Aviarios del Caribe, a solo 15 km al norte de Cahuita. Conozca de cerca a los perezosos rescatados de dos y tres dedos y aprenda sobre el trabajo de conservación que protege a estas extraordinarias criaturas.",
+        "duration": "2–3 horas",
+        "message": "¡Hola! Me gustaría visitar el Santuario de Perezosos. ¿Pueden ayudarme?"
+      },
+      "bribri": {
+        "title": "Día en el Territorio Indígena Bribri",
+        "desc": "Viaje a las montañas de Talamanca para visitar una comunidad Bribri. Aprenda sobre el cultivo del cacao, la medicina tradicional y una cultura que ha prosperado en esta región durante miles de años. Un día inmersivo, respetuoso e inolvidable.",
+        "duration": "Día completo",
+        "message": "¡Hola! Me gustaría organizar el tour al territorio indígena Bribri. ¿Pueden ayudarme?"
+      },
+      "dolphins": {
+        "title": "Avistamiento de Delfines en Manzanillo",
+        "desc": "Diríjase hacia el sur por la costa hasta el Refugio de Vida Silvestre Gandoca-Manzanillo, donde se avistan regularmente delfines giradores y nariz de botella en la bahía. El snorkel en el arrecife prístino suele estar incluido.",
+        "duration": "4–5 horas",
+        "message": "¡Hola! Me gustaría organizar el tour de avistamiento de delfines en Manzanillo. ¿Pueden ayudarme?"
+      }
+    }
+  },
+  "visit": {
+    "title": "Visítenos",
+    "subtitle": "Somos fáciles de encontrar y vale la pena el viaje desde cualquier punto de la costa caribeña.",
+    "address_title": "Dirección",
+    "address": "Calle Principal, 150 m al noroeste de la entrada al Parque Nacional Cahuita, Cahuita, Limón, Costa Rica, 70403",
+    "hours_title": "Horario",
+    "hours_daily": "Lunes – Domingo",
+    "hours_time": "12:00 – 22:00",
+    "phone_title": "Teléfono y WhatsApp",
+    "phone_primary": "+506 8457 8407",
+    "phone_secondary": "2755 1148 (teléfono fijo)",
+    "getting_here_title": "Cómo Llegar",
+    "getting_here_sj": "Desde San José, tome la Ruta 32 hacia el este en dirección a Limón, luego siga hacia el sur por la Ruta 36 hasta Cahuita. El trayecto dura aproximadamente 4 horas.",
+    "getting_here_bus": "Los autobuses salen desde la Terminal MEPE (San José) hacia Cahuita diariamente. El último bus suele salir a media tarde — confirme los horarios actuales en la terminal o consúltenos por WhatsApp.",
+    "getting_here_parking": "Hay estacionamiento en la calle a lo largo de la Calle Principal. El restaurante está a poca distancia caminando desde la parada principal de autobús.",
+    "accessibility_title": "Accesibilidad",
+    "accessibility_note": "Nuestra área de comedor tiene piso de arena, lo que puede ser difícil para huéspedes en silla de ruedas o con ayudas para la movilidad. Por favor escríbanos por WhatsApp antes de su visita y haremos todo lo posible para atenderle cómodamente.",
+    "map_title": "En el mapa",
+    "directions_cta": "Abrir en Google Maps"
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Un vistazo a la cocina, la mesa, el tanque y la costa.",
+    "alt": {
+      "hero": "Área de comedor al aire libre con techo de paja y mesas de madera artesanal en Casa de Langosta",
+      "lobster": "Langosta espinosa caribeña fresca en el tanque del restaurante",
+      "coconut": "Langosta en salsa de coco servida con arroz y frijoles y plátanos",
+      "ceviche": "Ceviche de pescado con limón y especias caribeñas",
+      "kitchen": "Roberto en la cocina abierta preparando la pesca del día",
+      "coast": "La costa caribeña de Cahuita al atardecer",
+      "interior1": "Comensales cenando bajo el techo de paja al atardecer",
+      "interior2": "Mesa de madera local artesanal puesta para la cena",
+      "snapper": "Pargo rojo entero a la parrilla fresco del Caribe",
+      "jerk": "Pollo jerk caribeño con arroz de coco y frijoles"
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "La forma más fácil de comunicarse con nosotros es por WhatsApp — Roberto y el equipo responden rápidamente. También puede usar el formulario a continuación.",
+    "whatsapp_cta": "WhatsApp",
+    "call_cta": "Llamarnos",
+    "email_cta": "Correo",
+    "form_title": "Enviar un mensaje",
+    "form_name": "Nombre",
+    "form_name_placeholder": "Su nombre",
+    "form_party": "Tamaño del grupo",
+    "form_party_placeholder": "Número de personas",
+    "form_date": "Fecha preferida",
+    "form_message": "Mensaje",
+    "form_message_placeholder": "Cuéntenos qué necesita — fecha, tamaño del grupo, requisitos dietéticos, interés en excursiones…",
+    "form_submit": "Enviar por WhatsApp",
+    "form_success": "¡Su mensaje ha sido enviado. Estaremos en contacto pronto!",
+    "form_error": "Algo salió mal. Por favor intente WhatsApp directamente."
+  },
+  "footer": {
+    "tagline": "Mariscos caribeños de familia. Cahuita, Costa Rica.",
+    "hours": "Abierto todos los días 12:00 – 22:00",
+    "copyright": "© {year} Restaurante Roberto — La Casa de la Langosta. Pura vida.",
+    "nav_title": "Navegar",
+    "contact_title": "Contacto"
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "body": "La página que busca no existe. Regrese a la página de inicio y encuentre su mesa.",
+    "cta": "Volver al inicio"
+  },
+  "badges": {
+    "gf": "Sin gluten",
+    "v": "Vegetariano",
+    "vegan": "Vegano",
+    "spicy": "Picante",
+    "shellfish": "Contiene mariscos",
+    "market_price": "Precio de mercado"
+  }
+}
