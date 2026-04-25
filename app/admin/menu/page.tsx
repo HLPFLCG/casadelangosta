@@ -258,10 +258,10 @@ export default function AdminMenuPage() {
 
       {/* Edit / Add Modal */}
       {editing && (
-        <div
-          role="presentation"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
-          onClick={(e) => e.target === e.currentTarget && setEditing(null)}
+        <dialog
+          open
+          aria-label={editing.itemId ? "Edit menu item" : "Add menu item"}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 m-0 w-full h-full max-w-none max-h-none border-0 bg-transparent"
           onKeyDown={(e) => e.key === "Escape" && setEditing(null)}
         >
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
@@ -431,7 +431,7 @@ export default function AdminMenuPage() {
               </button>
             </div>
           </div>
-        </div>
+        </dialog>
       )}
     </div>
   );

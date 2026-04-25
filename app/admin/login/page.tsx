@@ -1,8 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 function LoginForm() {
   const router = useRouter();

@@ -3,7 +3,8 @@ import type { NextRequest } from "next/server";
 
 export const ADMIN_SESSION_COOKIE = "admin_session";
 const ALGORITHM = "HS256";
-const SESSION_DURATION = "24h";
+/** Session duration in seconds — used for both the JWT expiry and the cookie maxAge. */
+const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24; // 24 hours
 
 function getJwtSecret(): Uint8Array {
   const secret = process.env.ADMIN_JWT_SECRET;
@@ -15,7 +16,7 @@ export async function createSessionToken(): Promise<string> {
   return new SignJWT({ role: "admin" })
     .setProtectedHeader({ alg: ALGORITHM })
     .setIssuedAt()
-    .setExpirationTime(SESSION_DURATION)
+    .setExpirationTime(`${SESSION_MAX_AGE_SECONDS}s`)
     .sign(getJwtSecret());
 }
 
@@ -75,7 +76,7 @@ export function sessionCookieOptions() {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax" as const,
-    maxAge: 60 * 60 * 24,
+    maxAge: SESSION_MAX_AGE_SECONDS,
     path: "/",
   };
 }
