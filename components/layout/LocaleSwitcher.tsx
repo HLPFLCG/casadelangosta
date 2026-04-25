@@ -16,6 +16,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center gap-1 text-sm font-medium", className)}>
       <button
+        type="button"
         onClick={() => switchLocale("en")}
         aria-label="Switch to English"
         aria-current={locale === "en" ? "true" : undefined}
@@ -28,6 +29,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       </button>
       <span className="text-border select-none">|</span>
       <button
+        type="button"
         onClick={() => switchLocale("es")}
         aria-label="Cambiar a español"
         aria-current={locale === "es" ? "true" : undefined}

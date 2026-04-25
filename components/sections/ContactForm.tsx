@@ -120,9 +120,9 @@ export function ContactForm({ locale }: { locale: string }) {
             {t("form_submit")}
           </Button>
           {status === "success" && (
-            <p role="status" className="text-sm text-center text-ocean font-medium">
+            <output className="text-sm text-center text-ocean font-medium block">
               {t("form_success")}
-            </p>
+            </output>
           )}
           {status === "error" && (
             <p role="alert" className="text-sm text-center text-destructive font-medium">

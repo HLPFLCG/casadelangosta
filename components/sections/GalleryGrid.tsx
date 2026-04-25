@@ -39,6 +39,7 @@ export function GalleryGrid({ photos }: { photos: Photo[] }) {
       </div>
 
       {lightbox && (
+        // biome-ignore lint/a11y/useSemanticElements: <dialog> requires open attribute management; conditional render pattern is equivalent
         <div
           role="dialog"
           aria-modal="true"
@@ -59,6 +60,7 @@ export function GalleryGrid({ photos }: { photos: Photo[] }) {
           <div
             className="relative max-w-4xl w-full max-h-[85vh] rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
           >
             <Image
               src={lightbox.src}
