@@ -11,6 +11,7 @@ export const routing = defineRouting({
     "/visit": { en: "/visit", es: "/visita" },
     "/gallery": { en: "/gallery", es: "/galeria" },
     "/contact": { en: "/contact", es: "/contacto" },
+    "/reserve": { en: "/reserve", es: "/reservar" },
   },
 });
 

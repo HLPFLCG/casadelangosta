@@ -10,7 +10,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Link } from "@/i18n/navigation";
-import { reserveLink } from "@/lib/whatsapp";
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -25,7 +24,7 @@ const NAV_LINKS = [
   { href: "/contact", key: "contact" },
 ] as const;
 
-export function MobileNav({ locale }: { locale: string }) {
+export function MobileNav({ locale: _locale }: { locale: string }) {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
 
@@ -53,11 +52,11 @@ export function MobileNav({ locale }: { locale: string }) {
           ))}
         </nav>
         <div className="px-6 mt-6 flex flex-col gap-3">
-          <Button asChild variant="accent" className="w-full">
-            <a href={reserveLink(locale)} target="_blank" rel="noopener noreferrer">
-              {t("reserve")}
-            </a>
-          </Button>
+          <SheetClose asChild>
+            <Button asChild variant="accent" className="w-full">
+              <Link href="/reserve">{t("reserve")}</Link>
+            </Button>
+          </SheetClose>
           <LocaleSwitcher className="justify-center" />
         </div>
       </SheetContent>
