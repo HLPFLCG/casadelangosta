@@ -4,6 +4,7 @@ import { excursions } from "@/content/excursions.en";
 import { PHONE_WHATSAPP } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import { buildWaLink } from "@/lib/whatsapp";
+import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
@@ -23,7 +24,7 @@ export async function generateMetadata({
   });
 }
 
-function ExcursionsPage({ locale }: { locale: string }) {
+function ExcursionsPage() {
   const t = useTranslations("excursions");
 
   return (
@@ -37,7 +38,7 @@ function ExcursionsPage({ locale }: { locale: string }) {
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
-          {excursions.map(({ id, icon }) => {
+          {excursions.map(({ id, icon, pricePerPerson, stripeLink }) => {
             const message = t(`items.${id}.message`);
             const waLink = buildWaLink({ message, phone: PHONE_WHATSAPP });
 
@@ -48,17 +49,31 @@ function ExcursionsPage({ locale }: { locale: string }) {
                     {icon}
                   </span>
                   <CardTitle className="text-2xl">{t(`items.${id}.title`)}</CardTitle>
-                  <p className="text-xs font-semibold text-reef uppercase tracking-wide mt-1">
-                    {t(`items.${id}.duration`)}
-                  </p>
+                  <div className="flex items-center gap-3 mt-1">
+                    <p className="text-xs font-semibold text-reef uppercase tracking-wide">
+                      {t(`items.${id}.duration`)}
+                    </p>
+                    <span className="text-xs text-muted-text">·</span>
+                    <p className="text-xs font-semibold text-ocean">
+                      ${pricePerPerson} {t("per_person")}
+                    </p>
+                  </div>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between gap-6">
+                <CardContent className="flex-1 flex flex-col justify-between gap-4">
                   <p className="text-muted-text leading-relaxed">{t(`items.${id}.desc`)}</p>
-                  <Button asChild variant="default" className="w-full sm:w-auto">
-                    <a href={waLink} target="_blank" rel="noopener noreferrer">
-                      {t("ask_whatsapp")}
-                    </a>
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button asChild variant="default" className="flex-1">
+                      <a href={stripeLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                        {t("book_online")}
+                      </a>
+                    </Button>
+                    <Button asChild variant="secondary" className="flex-1">
+                      <a href={waLink} target="_blank" rel="noopener noreferrer">
+                        {t("ask_whatsapp")}
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             );
@@ -74,10 +89,9 @@ function ExcursionsPage({ locale }: { locale: string }) {
 }
 
 export default async function ExcursionsPageWrapper({
-  params,
+  params: _params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  return <ExcursionsPage locale={locale} />;
+  return <ExcursionsPage />;
 }

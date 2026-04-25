@@ -94,8 +94,10 @@
   "excursions": {
     "title": "Excursiones Locales",
     "subtitle": "Cahuita y la costa circundante son de los lugares más biodiversos del planeta. Trabajamos con guías locales de confianza — pase por el restaurante o escríbanos por WhatsApp para organizar cualquiera de los tours a continuación.",
-    "booking_note": "Todas las excursiones se organizan en el restaurante o por WhatsApp. No se requiere pago en el restaurante.",
+    "booking_note": "Modo demo: los enlaces de Stripe son solo para demostración. Las reservas por WhatsApp siempre son bienvenidas.",
     "ask_whatsapp": "Preguntar por WhatsApp",
+    "book_online": "Reservar y Pagar en Línea",
+    "per_person": "por persona",
     "items": {
       "park": {
         "title": "Snorkel en el Parque Nacional Cahuita",
@@ -196,5 +198,29 @@
     "spicy": "Picante",
     "shellfish": "Contiene mariscos",
     "market_price": "Precio de mercado"
+  },
+  "reserve": {
+    "title": "Reservar una Mesa",
+    "subtitle": "Reserve su mesa en línea — confirmaremos su reserva en pocas horas.",
+    "demo_note": "Modo demo: las reservas no se almacenan aún. Su confirmación es solo ilustrativa.",
+    "form_name": "Nombre",
+    "form_name_placeholder": "Su nombre completo",
+    "form_email": "Correo electrónico",
+    "form_email_placeholder": "su@correo.com",
+    "form_phone": "Teléfono / WhatsApp",
+    "form_phone_placeholder": "+506 8000 0000",
+    "form_date": "Fecha preferida",
+    "form_time": "Hora preferida",
+    "form_party": "Número de personas",
+    "form_party_1": "1 persona",
+    "form_party_n": "{n} personas",
+    "form_requests": "Solicitudes especiales",
+    "form_requests_placeholder": "Requisitos dietéticos, celebraciones, necesidades de accesibilidad…",
+    "form_submit": "Solicitar reserva",
+    "confirm_title": "¡Reserva recibida!",
+    "confirm_ref": "Referencia de reserva:",
+    "confirm_body": "Confirmaremos su mesa por correo o WhatsApp en pocas horas. ¡Hasta pronto!",
+    "confirm_whatsapp": "También escríbanos por WhatsApp",
+    "new_reservation": "Hacer otra reserva"
   }
 }

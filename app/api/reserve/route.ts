@@ -40,10 +40,9 @@ export async function POST(req: NextRequest) {
   // The from address must belong to a domain verified in your Resend account.
   const resendApiKey = process.env.RESEND_API_KEY;
   if (resendApiKey) {
-    const recipients = [
-      process.env.NOTIFY_EMAIL_OWNER,
-      process.env.NOTIFY_EMAIL_ADMIN,
-    ].filter((e): e is string => typeof e === "string" && e.length > 0);
+    const recipients = [process.env.NOTIFY_EMAIL_OWNER, process.env.NOTIFY_EMAIL_ADMIN].filter(
+      (e): e is string => typeof e === "string" && e.length > 0
+    );
 
     const from = process.env.RESEND_FROM_EMAIL;
     if (!from) {

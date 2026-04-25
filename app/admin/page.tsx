@@ -1,28 +1,53 @@
 "use client";
 
-import { ImageIcon, Info, LayoutDashboard, LogOut, UtensilsCrossed } from "lucide-react";
+import {
+  CalendarDays,
+  ImageIcon,
+  Info,
+  LayoutDashboard,
+  LogOut,
+  Map as MapIcon,
+  UtensilsCrossed,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const sections = [
   {
+    href: "/admin/reservations",
+    icon: CalendarDays,
+    label: "Reservations",
+    description: "View and manage table booking requests",
+    badge: "Demo",
+  },
+  {
+    href: "/admin/tours",
+    icon: MapIcon,
+    label: "Tour Bookings",
+    description: "Track excursion bookings & Stripe payments",
+    badge: "Demo",
+  },
+  {
     href: "/admin/gallery",
     icon: ImageIcon,
     label: "Gallery",
     description: "Upload photos and manage the gallery",
+    badge: null,
   },
   {
     href: "/admin/menu",
     icon: UtensilsCrossed,
     label: "Menu",
     description: "Edit menu items, prices, and descriptions",
+    badge: null,
   },
   {
     href: "/admin/content",
     icon: Info,
     label: "Site Info",
     description: "Update hours, phone, and address",
+    badge: null,
   },
 ];
 
@@ -61,12 +86,17 @@ export default function AdminDashboard() {
         </p>
 
         <div className="grid sm:grid-cols-3 gap-6">
-          {sections.map(({ href, icon: Icon, label, description }) => (
+          {sections.map(({ href, icon: Icon, label, description, badge }) => (
             <Link
               key={href}
               href={href}
-              className="block bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-md hover:border-teal-300 transition group"
+              className="relative block bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-md hover:border-teal-300 transition group"
             >
+              {badge && (
+                <span className="absolute top-4 right-4 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full px-2 py-0.5">
+                  {badge}
+                </span>
+              )}
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal-50 text-teal-700 mb-4 group-hover:bg-teal-100 transition">
                 <Icon className="h-6 w-6" />
               </div>

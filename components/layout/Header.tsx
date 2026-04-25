@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import { reserveLink } from "@/lib/whatsapp";
 import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileNav } from "./MobileNav";
@@ -46,9 +45,7 @@ export function Header({ locale }: { locale: string }) {
         <div className="hidden lg:flex items-center gap-3">
           <LocaleSwitcher />
           <Button asChild variant="accent" size="sm">
-            <a href={reserveLink(locale)} target="_blank" rel="noopener noreferrer">
-              {t("reserve")}
-            </a>
+            <Link href="/reserve">{t("reserve")}</Link>
           </Button>
         </div>
 

@@ -94,8 +94,10 @@
   "excursions": {
     "title": "Local Excursions",
     "subtitle": "Cahuita and the surrounding coast are among the most biodiverse places on earth. We work with trusted local guides — stop by the restaurant or WhatsApp us to arrange any of the tours below.",
-    "booking_note": "All excursions are arranged on-site or by WhatsApp. No in-restaurant payment required.",
+    "booking_note": "Demo mode: Stripe links are for demonstration only. WhatsApp bookings are always welcome.",
     "ask_whatsapp": "Ask on WhatsApp",
+    "book_online": "Book & Pay Online",
+    "per_person": "per person",
     "items": {
       "park": {
         "title": "Cahuita National Park Snorkel Tour",
@@ -196,5 +198,29 @@
     "spicy": "Spicy",
     "shellfish": "Contains shellfish",
     "market_price": "Market price"
+  },
+  "reserve": {
+    "title": "Reserve a Table",
+    "subtitle": "Book your table online — we'll confirm your reservation within a few hours.",
+    "demo_note": "Demo mode: reservations are not stored yet. Your booking confirmation is for illustration purposes.",
+    "form_name": "Name",
+    "form_name_placeholder": "Your full name",
+    "form_email": "Email",
+    "form_email_placeholder": "your@email.com",
+    "form_phone": "Phone / WhatsApp",
+    "form_phone_placeholder": "+1 555 000 0000",
+    "form_date": "Preferred date",
+    "form_time": "Preferred time",
+    "form_party": "Party size",
+    "form_party_1": "1 guest",
+    "form_party_n": "{n} guests",
+    "form_requests": "Special requests",
+    "form_requests_placeholder": "Dietary requirements, celebrations, accessibility needs…",
+    "form_submit": "Request reservation",
+    "confirm_title": "Reservation received!",
+    "confirm_ref": "Booking reference:",
+    "confirm_body": "We'll confirm your table by email or WhatsApp within a few hours. See you soon!",
+    "confirm_whatsapp": "Also message us on WhatsApp",
+    "new_reservation": "Make another reservation"
   }
 }
