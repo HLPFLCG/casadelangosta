@@ -1,10 +1,10 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useCallback } from "react";
-import { Button } from "@/components/ui/button";
 
 export function Testimonials() {
   const t = useTranslations("testimonials");

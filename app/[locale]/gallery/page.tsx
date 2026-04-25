@@ -1,6 +1,7 @@
-import { getTranslations } from "next-intl/server";
 import { GalleryGrid } from "@/components/sections/GalleryGrid";
+import { getGalleryPhotos } from "@/lib/admin-data";
 import { buildMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -27,7 +28,7 @@ export default async function GalleryPage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "gallery" });
 
-  const photos = [
+  const staticPhotos = [
     { src: "/images/hero-dining.jpg", alt: t("alt.hero"), width: 1200, height: 800 },
     { src: "/images/lobster-tank.jpg", alt: t("alt.lobster"), width: 800, height: 600 },
     { src: "/images/lobster-coconut.jpg", alt: t("alt.coconut"), width: 800, height: 600 },
@@ -39,6 +40,8 @@ export default async function GalleryPage({
     { src: "/images/snapper.jpg", alt: t("alt.snapper"), width: 800, height: 600 },
     { src: "/images/jerk-chicken.jpg", alt: t("alt.jerk"), width: 800, height: 600 },
   ];
+
+  const photos = await getGalleryPhotos(staticPhotos);
 
   return (
     <div className="bg-coconut min-h-screen py-16">

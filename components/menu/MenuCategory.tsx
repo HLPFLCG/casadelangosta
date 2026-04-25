@@ -1,5 +1,5 @@
-import { useTranslations } from "next-intl";
 import type { MenuCategory as MenuCategoryType } from "@/content/menu.en";
+import { useTranslations } from "next-intl";
 import { MenuItem } from "./MenuItem";
 
 interface MenuCategoryProps {

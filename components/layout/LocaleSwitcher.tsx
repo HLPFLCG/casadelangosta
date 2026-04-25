@@ -1,8 +1,8 @@
 "use client";
 
-import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 export function LocaleSwitcher({ className }: { className?: string }) {
   const locale = useLocale();
@@ -21,9 +21,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
         aria-current={locale === "en" ? "true" : undefined}
         className={cn(
           "px-2 py-1 rounded-md transition-colors",
-          locale === "en"
-            ? "text-ocean font-semibold"
-            : "text-muted-text hover:text-palm"
+          locale === "en" ? "text-ocean font-semibold" : "text-muted-text hover:text-palm"
         )}
       >
         EN
@@ -35,9 +33,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
         aria-current={locale === "es" ? "true" : undefined}
         className={cn(
           "px-2 py-1 rounded-md transition-colors",
-          locale === "es"
-            ? "text-ocean font-semibold"
-            : "text-muted-text hover:text-palm"
+          locale === "es" ? "text-ocean font-semibold" : "text-muted-text hover:text-palm"
         )}
       >
         ES

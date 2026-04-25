@@ -1,8 +1,8 @@
-import { Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 import { PHONE_LANDLINE, PHONE_WHATSAPP_DISPLAY } from "@/lib/constants";
 import { reserveLink } from "@/lib/whatsapp";
-import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function CTA({ locale }: { locale: string }) {
   const t = useTranslations("cta_section");
@@ -15,11 +15,7 @@ export function CTA({ locale }: { locale: string }) {
         </h2>
         <p className="text-white/90 text-lg mb-10">{t("body")}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-reef hover:bg-coconut font-semibold"
-          >
+          <Button asChild size="lg" className="bg-white text-reef hover:bg-coconut font-semibold">
             <a href={reserveLink(locale)} target="_blank" rel="noopener noreferrer">
               {t("whatsapp")}
             </a>

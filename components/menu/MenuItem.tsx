@@ -1,5 +1,5 @@
-import type { MenuItem as MenuItemType } from "@/content/menu.en";
 import { Separator } from "@/components/ui/separator";
+import type { MenuItem as MenuItemType } from "@/content/menu.en";
 import { MenuBadge } from "./MenuBadge";
 
 interface MenuItemProps {
@@ -19,9 +19,7 @@ export function MenuItem({ item, lobsterNote }: MenuItemProps) {
               <MenuBadge key={b} badge={b} />
             ))}
           </div>
-          {item.marketPrice && (
-            <p className="text-xs text-muted-text mt-2 italic">{lobsterNote}</p>
-          )}
+          {item.marketPrice && <p className="text-xs text-muted-text mt-2 italic">{lobsterNote}</p>}
         </div>
         {item.priceUSD && (
           <div className="flex-shrink-0 text-right">

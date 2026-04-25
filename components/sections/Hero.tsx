@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { reserveLink } from "@/lib/whatsapp";
-import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function Hero({ locale }: { locale: string }) {
   const t = useTranslations("hero");
@@ -44,7 +44,12 @@ export function Hero({ locale }: { locale: string }) {
                 {t("cta_whatsapp")}
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-coconut text-coconut hover:bg-coconut hover:text-palm">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-coconut text-coconut hover:bg-coconut hover:text-palm"
+            >
               <Link href="/menu">{t("cta_menu")}</Link>
             </Button>
           </div>

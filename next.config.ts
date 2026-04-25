@@ -1,6 +1,6 @@
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 initOpenNextCloudflareForDev();
 

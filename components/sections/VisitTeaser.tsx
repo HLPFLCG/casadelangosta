@@ -1,7 +1,7 @@
+import { Button } from "@/components/ui/button";
+import { GOOGLE_MAPS_URL, OPENSTREETMAP_EMBED } from "@/lib/constants";
 import { Clock, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { GOOGLE_MAPS_URL, OPENSTREETMAP_EMBED } from "@/lib/constants";
-import { Button } from "@/components/ui/button";
 
 export function VisitTeaser() {
   const t = useTranslations("visit_teaser");
@@ -22,8 +22,7 @@ export function VisitTeaser() {
             <div className="flex items-center gap-3 mb-8">
               <Clock className="h-5 w-5 text-reef flex-shrink-0" aria-hidden="true" />
               <p className="text-sand">
-                <span className="font-semibold text-coconut">{t("hours_label")}</span>{" "}
-                {t("hours")}
+                <span className="font-semibold text-coconut">{t("hours_label")}</span> {t("hours")}
               </p>
             </div>
             <Button asChild variant="accent">

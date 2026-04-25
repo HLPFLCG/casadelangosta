@@ -1,16 +1,15 @@
-import { Clock, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 import {
   GOOGLE_MAPS_URL,
   OPENSTREETMAP_EMBED,
   PHONE_LANDLINE,
   PHONE_LANDLINE_DISPLAY,
-  PHONE_WHATSAPP,
   PHONE_WHATSAPP_DISPLAY,
 } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import { reserveLink } from "@/lib/whatsapp";
-import { Button } from "@/components/ui/button";
+import { Clock, MapPin, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params,
@@ -89,11 +88,7 @@ function VisitPage({ locale }: { locale: string }) {
             </h2>
             <div className="flex flex-col gap-3">
               <Button asChild variant="default" className="w-full sm:w-auto">
-                <a
-                  href={reserveLink(locale)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={reserveLink(locale)} target="_blank" rel="noopener noreferrer">
                   WhatsApp: {PHONE_WHATSAPP_DISPLAY}
                 </a>
               </Button>
@@ -128,9 +123,7 @@ function VisitPage({ locale }: { locale: string }) {
             >
               {t("accessibility_title")}
             </h2>
-            <p className="text-sm text-muted-text leading-relaxed">
-              {t("accessibility_note")}
-            </p>
+            <p className="text-sm text-muted-text leading-relaxed">{t("accessibility_note")}</p>
           </section>
         </div>
 

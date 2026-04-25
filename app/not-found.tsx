@@ -6,8 +6,8 @@ export default function NotFound() {
       <p className="text-6xl font-display text-reef font-bold mb-4">404</p>
       <h1 className="font-display text-3xl font-bold text-palm mb-4">Page not found</h1>
       <p className="text-muted-text max-w-sm mb-8 leading-relaxed">
-        The page you&apos;re looking for doesn&apos;t exist. Head back to the home page and find your
-        table.
+        The page you&apos;re looking for doesn&apos;t exist. Head back to the home page and find
+        your table.
       </p>
       <Link
         href="/"

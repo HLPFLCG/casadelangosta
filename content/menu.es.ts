@@ -146,8 +146,7 @@ export const menu: MenuCategory[] = [
       {
         id: "juice-pipa",
         name: "Pipa Fría (Agua de Coco Natural)",
-        description:
-          "Coco entero frío, abierto en la mesa. La bebida más caribeña que existe.",
+        description: "Coco entero frío, abierto en la mesa. La bebida más caribeña que existe.",
         priceUSD: 5,
         priceCRC: 2700,
         badges: ["gf", "vegan"],

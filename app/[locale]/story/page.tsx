@@ -1,9 +1,8 @@
+import { Button } from "@/components/ui/button";
+import { buildMetadata } from "@/lib/seo";
+import { reserveLink } from "@/lib/whatsapp";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
-import { reserveLink } from "@/lib/whatsapp";
-import { buildMetadata } from "@/lib/seo";
-import { Button } from "@/components/ui/button";
 
 export async function generateMetadata({
   params,

@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { excursions } from "@/content/excursions.en";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { excursions } from "@/content/excursions.en";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export function ExcursionsTeaser() {
   const t = useTranslations("excursions");
@@ -24,9 +24,7 @@ export function ExcursionsTeaser() {
                 <span className="text-4xl" aria-hidden="true">
                   {icon}
                 </span>
-                <CardTitle className="text-lg mt-2">
-                  {t(`items.${id}.title`)}
-                </CardTitle>
+                <CardTitle className="text-lg mt-2">{t(`items.${id}.title`)}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-xs text-muted-text leading-relaxed">
@@ -39,9 +37,7 @@ export function ExcursionsTeaser() {
 
         <div className="text-center">
           <Button asChild variant="default">
-            <Link href="/excursions">
-              {t("booking_note")}
-            </Link>
+            <Link href="/excursions">{t("booking_note")}</Link>
           </Button>
         </div>
       </div>

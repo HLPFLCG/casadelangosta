@@ -28,8 +28,7 @@ export const HOURS = {
   days: "Daily",
 };
 
-export const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=9.7365,-82.8407";
+export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=9.7365,-82.8407";
 
 export const OPENSTREETMAP_EMBED =
   "https://www.openstreetmap.org/export/embed.html?bbox=-82.8457%2C9.7315%2C-82.8357%2C9.7415&layer=mapnik&marker=9.7365%2C-82.8407";
