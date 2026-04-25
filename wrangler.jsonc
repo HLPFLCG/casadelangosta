@@ -36,6 +36,24 @@
   //      wrangler secret put ADMIN_PASSWORD
   //      wrangler secret put ADMIN_JWT_SECRET   (use a long random string)
   //
+  // ── Contact-form email notifications ─────────────────────────────────────
+  //
+  // When RESEND_API_KEY is set, an email is sent to all configured recipients
+  // each time someone submits the reservation/contact form.
+  //
+  // 4. Sign up at https://resend.com and verify your sending domain
+  //    (e.g. casadelangosta.cr or hlpfl.org).
+  //
+  // 5. Set the email secrets:
+  //      wrangler secret put RESEND_API_KEY        (from your Resend dashboard)
+  //      wrangler secret put RESEND_FROM_EMAIL     (e.g. reservations@casadelangosta.cr)
+  //      wrangler secret put NOTIFY_EMAIL_OWNER    (owner's email, e.g. roberto@casadelangosta.cr)
+  //      wrangler secret put NOTIFY_EMAIL_ADMIN    (your email, e.g. you@hlpfl.org)
+  //
+  //    Both NOTIFY_EMAIL_OWNER and NOTIFY_EMAIL_ADMIN are optional — set only the
+  //    ones you want to receive notifications. At least one must be set for emails
+  //    to be delivered. The WhatsApp flow continues to work regardless.
+  //
   // "kv_namespaces": [
   //   {
   //     "binding": "ADMIN_KV",

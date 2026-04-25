@@ -9,7 +9,7 @@
 
 ## Contact form
 - **WhatsApp-first**: The `/api/reserve` route builds a `wa.me` deep link and returns it to the client, which opens it in a new tab. No server-side state is stored. This is intentional — it keeps the backend stateless and the owner's primary workflow in WhatsApp.
-- **Resend fallback**: The email path is fully wired but commented out in `app/api/reserve/route.ts`. Uncomment and set `RESEND_API_KEY` to activate it.
+- **Dual email notifications**: When `RESEND_API_KEY` is set, the route also sends an email to every address listed in `NOTIFY_EMAIL_OWNER` and `NOTIFY_EMAIL_ADMIN`. Either or both can be omitted — email failure is non-fatal and never blocks the WhatsApp response. Set `RESEND_FROM_EMAIL` to the verified sending address (must be on a Resend-verified domain).
 
 ## Gallery lightbox
 - **CSS columns + client component**: Using CSS `columns` for a masonry-style layout (no JS masonry library). The lightbox state lives in `GalleryGrid` (a client component), while the page itself remains a server component for metadata generation.

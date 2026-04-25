@@ -31,20 +31,54 @@ export async function POST(req: NextRequest) {
 
   const waUrl = buildWaLink({ message: composed, phone: PHONE_WHATSAPP });
 
-  // If RESEND_API_KEY is set, also send an email notification to the owner.
-  // Uncomment the block below after installing resend and configuring the env var.
-  //
-  // const apiKey = process.env.RESEND_API_KEY;
-  // if (apiKey) {
-  //   const { Resend } = await import("resend");
-  //   const resend = new Resend(apiKey);
-  //   await resend.emails.send({
-  //     from: "reservations@casadelangosta.cr",
-  //     to: "roberto@casadelangosta.cr",
-  //     subject: `New reservation request from ${name}`,
-  //     text: composed,
-  //   });
-  // }
+  // Send email notifications to the owner and/or admin when RESEND_API_KEY is set.
+  // Configure recipients via Cloudflare secrets:
+  //   wrangler secret put RESEND_API_KEY
+  //   wrangler secret put NOTIFY_EMAIL_OWNER   (e.g. roberto@casadelangosta.cr)
+  //   wrangler secret put NOTIFY_EMAIL_ADMIN   (e.g. you@hlpfl.org)
+  //   wrangler secret put RESEND_FROM_EMAIL    (e.g. reservations@casadelangosta.cr)
+  // The from address must belong to a domain verified in your Resend account.
+  const resendApiKey = process.env.RESEND_API_KEY;
+  if (resendApiKey) {
+    const recipients = [
+      process.env.NOTIFY_EMAIL_OWNER,
+      process.env.NOTIFY_EMAIL_ADMIN,
+    ].filter((e): e is string => typeof e === "string" && e.length > 0);
+
+    const from = process.env.RESEND_FROM_EMAIL;
+    if (!from) {
+      console.warn(
+        "RESEND_FROM_EMAIL is not set — skipping email notification. " +
+          "Set it to a Resend-verified sending address (e.g. reservations@casadelangosta.cr)."
+      );
+    } else if (recipients.length > 0) {
+      const subject =
+        locale === "es"
+          ? `Nueva solicitud de reserva de ${name}`
+          : `New reservation request from ${name}`;
+      const text = [
+        `Name: ${name}`,
+        `Party size: ${partySize}`,
+        date ? `Date: ${date}` : null,
+        "",
+        `Message:\n${message}`,
+        "",
+        `—`,
+        `Sent via casadelangosta.cr`,
+      ]
+        .filter((line): line is string => line !== null)
+        .join("\n");
+
+      try {
+        const { Resend } = await import("resend");
+        const resend = new Resend(resendApiKey);
+        await resend.emails.send({ from, to: recipients, subject, text });
+      } catch (err) {
+        // Email failure is non-fatal — the WhatsApp link is still returned.
+        console.error("Failed to send reservation email:", err);
+      }
+    }
+  }
 
   return NextResponse.json({ waUrl, ok: true });
 }
