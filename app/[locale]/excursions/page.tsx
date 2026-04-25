@@ -24,7 +24,7 @@ export async function generateMetadata({
   });
 }
 
-function ExcursionsPage(_: { locale: string }) {
+function ExcursionsPage() {
   const t = useTranslations("excursions");
 
   return (
@@ -89,10 +89,9 @@ function ExcursionsPage(_: { locale: string }) {
 }
 
 export default async function ExcursionsPageWrapper({
-  params,
+  params: _params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  return <ExcursionsPage locale={locale} />;
+  return <ExcursionsPage />;
 }
