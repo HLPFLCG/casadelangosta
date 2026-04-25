@@ -1,9 +1,13 @@
 import { menu as menuEn } from "@/content/menu.en";
 import { menu as menuEs } from "@/content/menu.es";
+import { requireAdminAuth } from "@/lib/admin-auth";
 import { getMenuData, setMenuData } from "@/lib/admin-data";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
   const { searchParams } = new URL(req.url);
   const locale = searchParams.get("locale") === "es" ? "es" : "en";
   const staticMenu = locale === "es" ? menuEs : menuEn;
@@ -12,6 +16,9 @@ export async function GET(req: Request) {
 }
 
 export async function PUT(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
   const { searchParams } = new URL(req.url);
   const locale = searchParams.get("locale") === "es" ? "es" : "en";
 

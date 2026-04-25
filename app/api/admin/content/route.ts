@@ -1,4 +1,5 @@
 import { type SiteInfo, getSiteInfo, setSiteInfo } from "@/lib/admin-data";
+import { requireAdminAuth } from "@/lib/admin-auth";
 import { ADDRESS, HOURS, PHONE_LANDLINE_DISPLAY, PHONE_WHATSAPP_DISPLAY } from "@/lib/constants";
 import { NextResponse } from "next/server";
 
@@ -11,12 +12,19 @@ const STATIC_INFO: SiteInfo = {
   addressCity: `${ADDRESS.city}, ${ADDRESS.province}, ${ADDRESS.country}`,
 };
 
-export async function GET() {
+export async function GET(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
   const data = await getSiteInfo();
   return NextResponse.json(data ?? STATIC_INFO);
 }
 
 export async function PUT(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   let body: unknown;
   try {
     body = await req.json();

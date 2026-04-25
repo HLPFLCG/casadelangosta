@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowLeft, GripVertical, ImageIcon, Trash2, Upload } from "lucide-react";
+import { ArrowLeft, Check, GripVertical, ImageIcon, Trash2, Upload, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Photo {
   src: string;
@@ -12,11 +12,18 @@ interface Photo {
   height: number;
 }
 
+interface PendingPhoto {
+  src: string;
+  alt: string;
+}
+
 export default function AdminGalleryPage() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [pending, setPending] = useState<PendingPhoto | null>(null);
+  const altInputRef = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   useEffect(() => {
@@ -26,6 +33,10 @@ export default function AdminGalleryPage() {
       .catch(() => setMessage({ type: "error", text: "Failed to load gallery" }))
       .finally(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (pending) altInputRef.current?.focus();
+  }, [pending]);
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -41,15 +52,20 @@ export default function AdminGalleryPage() {
         throw new Error((d as { error?: string }).error ?? "Upload failed");
       }
       const { src } = (await res.json()) as { src: string };
-      const alt = prompt("Enter a description for this photo:", file.name) ?? file.name;
-      setPhotos((prev) => [...prev, { src, alt, width: 800, height: 600 }]);
-      setMessage({ type: "success", text: "Photo uploaded. Click Save to publish." });
+      setPending({ src, alt: "" });
     } catch (err) {
       setMessage({ type: "error", text: err instanceof Error ? err.message : "Upload failed" });
     } finally {
       setUploading(false);
       e.target.value = "";
     }
+  }
+
+  function confirmPending() {
+    if (!pending) return;
+    setPhotos((prev) => [...prev, { src: pending.src, alt: pending.alt, width: 800, height: 600 }]);
+    setPending(null);
+    setMessage({ type: "success", text: "Photo added. Click Save to publish." });
   }
 
   async function handleSave() {
@@ -145,7 +161,7 @@ export default function AdminGalleryPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    unoptimized={photo.src.startsWith("/api/")}
+                    unoptimized={!photo.src.startsWith("/images/")}
                   />
                   <button
                     type="button"
@@ -160,7 +176,11 @@ export default function AdminGalleryPage() {
                   </div>
                 </div>
                 <div className="p-3">
+                  <label htmlFor={`alt-${index}`} className="sr-only">
+                    Photo description
+                  </label>
                   <input
+                    id={`alt-${index}`}
                     type="text"
                     value={photo.alt}
                     onChange={(e) => updateAlt(index, e.target.value)}
@@ -173,6 +193,59 @@ export default function AdminGalleryPage() {
           </div>
         )}
       </main>
+
+      {/* Alt text dialog shown after upload */}
+      {pending && (
+        <dialog
+          open
+          aria-label="Add photo description"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 m-0 w-full h-full max-w-none max-h-none border-0 bg-transparent"
+        >
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-semibold text-gray-900">Describe this photo</h3>
+              <button
+                type="button"
+                onClick={() => setPending(null)}
+                className="text-gray-400 hover:text-gray-700"
+                aria-label="Cancel"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <label htmlFor="pending-alt" className="block text-sm text-gray-600 mb-2">
+              Photo description (shown to screen readers and used as alt text)
+            </label>
+            <input
+              id="pending-alt"
+              ref={altInputRef}
+              type="text"
+              value={pending.alt}
+              onChange={(e) => setPending((p) => p && { ...p, alt: e.target.value })}
+              onKeyDown={(e) => e.key === "Enter" && confirmPending()}
+              placeholder="e.g. Fresh lobster in coconut sauce"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600"
+            />
+            <div className="flex justify-end gap-3 mt-5">
+              <button
+                type="button"
+                onClick={() => setPending(null)}
+                className="px-4 py-2 text-sm text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={confirmPending}
+                className="flex items-center gap-1.5 px-4 py-2 text-sm bg-teal-700 text-white rounded-lg hover:bg-teal-800 transition"
+              >
+                <Check className="h-4 w-4" />
+                Add photo
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
     </div>
   );
 }

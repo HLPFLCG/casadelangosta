@@ -97,7 +97,7 @@ export default function AdminMenuPage() {
       prev.map((cat) => {
         if (cat.id !== categoryId) return cat;
         if (itemId === null) {
-          const newId = `item-${Date.now()}`;
+          const newId = `item-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
           return { ...cat, items: [...cat.items, { ...draft, id: newId }] };
         }
         return {

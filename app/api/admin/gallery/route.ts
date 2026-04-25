@@ -1,4 +1,5 @@
 import { getGalleryPhotos, setGalleryPhotos } from "@/lib/admin-data";
+import { requireAdminAuth } from "@/lib/admin-auth";
 import { NextResponse } from "next/server";
 
 const STATIC_PHOTOS = [
@@ -24,12 +25,19 @@ const STATIC_PHOTOS = [
   { src: "/images/jerk-chicken.jpg", alt: "Caribbean jerk chicken", width: 800, height: 600 },
 ];
 
-export async function GET() {
+export async function GET(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
   const photos = await getGalleryPhotos(STATIC_PHOTOS);
   return NextResponse.json(photos);
 }
 
 export async function PUT(req: Request) {
+  if (!(await requireAdminAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   let body: unknown;
   try {
     body = await req.json();
