@@ -1,5 +1,5 @@
-import { type SiteInfo, getSiteInfo, setSiteInfo } from "@/lib/admin-data";
 import { requireAdminAuth } from "@/lib/admin-auth";
+import { type SiteInfo, getSiteInfo, setSiteInfo } from "@/lib/admin-data";
 import { ADDRESS, HOURS, PHONE_LANDLINE_DISPLAY, PHONE_WHATSAPP_DISPLAY } from "@/lib/constants";
 import { NextResponse } from "next/server";
 

@@ -25,9 +25,9 @@ export function Testimonials() {
         <div className="relative">
           <div ref={emblaRef} className="overflow-hidden">
             <div className="flex gap-6">
-              {items.map((item, i) => (
+              {items.map((item) => (
                 <div
-                  key={i}
+                  key={item.author}
                   className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
                 >
                   <figure className="bg-coconut/10 border border-coconut/20 rounded-3xl p-8 h-full flex flex-col justify-between">

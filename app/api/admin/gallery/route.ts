@@ -1,5 +1,5 @@
-import { getGalleryPhotos, setGalleryPhotos } from "@/lib/admin-data";
 import { requireAdminAuth } from "@/lib/admin-auth";
+import { getGalleryPhotos, setGalleryPhotos } from "@/lib/admin-data";
 import { NextResponse } from "next/server";
 
 const STATIC_PHOTOS = [

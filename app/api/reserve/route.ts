@@ -62,8 +62,8 @@ export async function POST(req: NextRequest) {
         "",
         `Message:\n${message}`,
         "",
-        `—`,
-        `Sent via casadelangosta.cr`,
+        "—",
+        "Sent via casadelangosta.cr",
       ]
         .filter((line): line is string => line !== null)
         .join("\n");
