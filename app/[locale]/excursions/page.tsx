@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
-import { excursions } from "@/content/excursions.en";
-import { buildWaLink } from "@/lib/whatsapp";
-import { PHONE_WHATSAPP } from "@/lib/constants";
-import { buildMetadata } from "@/lib/seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { excursions } from "@/content/excursions.en";
+import { PHONE_WHATSAPP } from "@/lib/constants";
+import { buildMetadata } from "@/lib/seo";
+import { buildWaLink } from "@/lib/whatsapp";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params,

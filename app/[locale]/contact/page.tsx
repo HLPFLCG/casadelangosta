@@ -1,6 +1,6 @@
-import { getTranslations } from "next-intl/server";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { buildMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,

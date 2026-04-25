@@ -16,9 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: route === "/" ? "weekly" : "monthly",
         priority: route === "/" ? 1.0 : 0.8,
         alternates: {
-          languages: Object.fromEntries(
-            LOCALES.map((l) => [l, `${BASE_URL}/${l}${route}`])
-          ),
+          languages: Object.fromEntries(LOCALES.map((l) => [l, `${BASE_URL}/${l}${route}`])),
         },
       });
     }

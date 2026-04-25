@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PHONE_LANDLINE_DISPLAY, PHONE_WHATSAPP_DISPLAY } from "@/lib/constants";
 import { reserveLink } from "@/lib/whatsapp";
+import { useTranslations } from "next-intl";
 
 const NAV_LINKS = [
   { href: "/menu", key: "menu" },

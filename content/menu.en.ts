@@ -168,7 +168,8 @@ export const menu: MenuCategory[] = [
       {
         id: "juice-guanabana",
         name: "Guanábana Natural Juice",
-        description: "Creamy soursop blended with water — tropical, fragrant, and completely natural.",
+        description:
+          "Creamy soursop blended with water — tropical, fragrant, and completely natural.",
         priceUSD: 4,
         priceCRC: 2200,
         badges: ["gf", "vegan"],

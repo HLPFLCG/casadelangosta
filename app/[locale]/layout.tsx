@@ -1,10 +1,10 @@
-import { Fraunces, Inter } from "next/font/google";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { buildMetadata, restaurantJsonLd } from "@/lib/seo";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Fraunces, Inter } from "next/font/google";
 import type { ReactNode } from "react";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { buildMetadata, restaurantJsonLd } from "@/lib/seo";
 import "@/styles/globals.css";
 
 const fraunces = Fraunces({

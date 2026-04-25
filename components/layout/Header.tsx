@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { reserveLink } from "@/lib/whatsapp";
-import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileNav } from "./MobileNav";
 
@@ -26,8 +26,7 @@ export function Header({ locale }: { locale: string }) {
           className="font-display text-xl font-semibold text-palm hover:text-ocean transition-colors"
           aria-label="Casa de Langosta — Home"
         >
-          Casa de{" "}
-          <span className="text-ocean">Langosta</span>
+          Casa de <span className="text-ocean">Langosta</span>
         </Link>
 
         {/* Desktop nav */}

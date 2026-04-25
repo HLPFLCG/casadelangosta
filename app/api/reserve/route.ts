@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
-import { buildWaLink } from "@/lib/whatsapp";
 import { PHONE_WHATSAPP } from "@/lib/constants";
+import { buildWaLink } from "@/lib/whatsapp";
+import { type NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(1).max(100),
@@ -27,8 +27,7 @@ export async function POST(req: NextRequest) {
   const { name, partySize, date, message, locale } = parsed.data;
 
   const greeting = locale === "es" ? "¡Hola!" : "Hi!";
-  const composed =
-    `${greeting} I'm ${name}, party of ${partySize}${date ? ` on ${date}` : ""}.\n\n${message}`;
+  const composed = `${greeting} I'm ${name}, party of ${partySize}${date ? ` on ${date}` : ""}.\n\n${message}`;
 
   const waUrl = buildWaLink({ message: composed, phone: PHONE_WHATSAPP });
 

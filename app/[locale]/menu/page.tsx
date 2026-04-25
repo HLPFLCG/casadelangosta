@@ -1,8 +1,10 @@
-import { useTranslations } from "next-intl";
 import { MenuCategory } from "@/components/menu/MenuCategory";
 import { menu as menuEn } from "@/content/menu.en";
+import type { MenuCategory as MenuCategoryType } from "@/content/menu.en";
 import { menu as menuEs } from "@/content/menu.es";
+import { getMenuData } from "@/lib/admin-data";
 import { buildMetadata } from "@/lib/seo";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params,
@@ -21,9 +23,12 @@ export async function generateMetadata({
   });
 }
 
-function MenuPage({ locale }: { locale: string }) {
+function MenuPage({
+  menuData,
+}: {
+  menuData: MenuCategoryType[];
+}) {
   const t = useTranslations("menu");
-  const menuData = locale === "es" ? menuEs : menuEn;
 
   return (
     <div className="py-16 bg-coconut min-h-screen">
@@ -53,5 +58,7 @@ export default async function MenuPageWrapper({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return <MenuPage locale={locale} />;
+  const staticMenu = locale === "es" ? menuEs : menuEn;
+  const menuData = await getMenuData(locale, staticMenu);
+  return <MenuPage menuData={menuData} />;
 }

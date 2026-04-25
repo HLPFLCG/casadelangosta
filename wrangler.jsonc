@@ -9,7 +9,7 @@
   },
   "images": {
     "binding": "IMAGES"
-  },
+  }
 
   // KV namespace for Next.js incremental cache.
   // After running `wrangler kv namespace create NEXT_CACHE_WORKERS_KV`,
@@ -18,6 +18,34 @@
   //   {
   //     "binding": "NEXT_CACHE_WORKERS_KV",
   //     "id": "TODO: paste id here after running wrangler kv namespace create NEXT_CACHE_WORKERS_KV"
+  //   }
+  // ]
+
+  // ── Admin panel bindings ──────────────────────────────────────────────────
+  //
+  // 1. Create the KV namespace:
+  //      wrangler kv namespace create ADMIN_KV
+  //    Then paste the returned id below and uncomment the kv_namespaces block.
+  //
+  // 2. Create the R2 bucket:
+  //      wrangler r2 bucket create gallery-images
+  //    Then uncomment the r2_buckets block below.
+  //
+  // 3. Set the admin secrets (never commit these values):
+  //      wrangler secret put ADMIN_USERNAME
+  //      wrangler secret put ADMIN_PASSWORD
+  //      wrangler secret put ADMIN_JWT_SECRET   (use a long random string)
+  //
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "ADMIN_KV",
+  //     "id": "TODO: paste id here after running wrangler kv namespace create ADMIN_KV"
+  //   }
+  // ],
+  // "r2_buckets": [
+  //   {
+  //     "binding": "GALLERY_IMAGES",
+  //     "bucket_name": "gallery-images"
   //   }
   // ]
 }
