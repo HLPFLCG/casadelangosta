@@ -179,6 +179,12 @@
     "form_success": "¡Su mensaje ha sido enviado. Estaremos en contacto pronto!",
     "form_error": "Algo salió mal. Por favor intente WhatsApp directamente."
   },
+  "instagram": {
+    "title": "Síguenos en Instagram",
+    "subtitle": "La vida diaria de la cocina, el tanque y la costa caribeña.",
+    "follow_cta": "Seguir @casalangosta.cahuita",
+    "view_more": "Ver más en Instagram"
+  },
   "footer": {
     "tagline": "Mariscos caribeños de familia. Cahuita, Costa Rica.",
     "hours": "Abierto todos los días 12:00 – 22:00",

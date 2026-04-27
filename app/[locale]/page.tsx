@@ -1,6 +1,7 @@
 import { CTA } from "@/components/sections/CTA";
 import { ExcursionsTeaser } from "@/components/sections/ExcursionsTeaser";
 import { Hero } from "@/components/sections/Hero";
+import { InstagramFeed } from "@/components/sections/InstagramFeed";
 import { LobsterTank } from "@/components/sections/LobsterTank";
 import { SignatureDishes } from "@/components/sections/SignatureDishes";
 import { StoryTeaser } from "@/components/sections/StoryTeaser";
@@ -33,6 +34,7 @@ export default async function HomePage({
       <VisitTeaser />
       <ExcursionsTeaser />
       <Testimonials />
+      <InstagramFeed />
       <CTA locale={locale} />
     </>
   );
