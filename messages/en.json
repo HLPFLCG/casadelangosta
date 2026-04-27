@@ -179,6 +179,12 @@
     "form_success": "Your message has been sent. We'll be in touch soon!",
     "form_error": "Something went wrong. Please try WhatsApp directly."
   },
+  "instagram": {
+    "title": "Follow us on Instagram",
+    "subtitle": "Daily life from the kitchen, the tank, and the Caribbean coast.",
+    "follow_cta": "Follow @casalangosta.cahuita",
+    "view_more": "See more on Instagram"
+  },
   "footer": {
     "tagline": "Family-owned Caribbean seafood. Cahuita, Costa Rica.",
     "hours": "Open daily 12:00 – 22:00",
